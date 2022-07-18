@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { types } from "./user-types";
+import { types } from "./users-types";
 
 const users = (state = [], { type, payload }) => {
   switch (type) {

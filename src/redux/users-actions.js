@@ -1,4 +1,4 @@
-import { types } from "./user-types.js";
+import { types } from "./users-types.js";
 
 export const addUsers = (users) => ({
   type: types.ADD,

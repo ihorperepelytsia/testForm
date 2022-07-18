@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
+import { getUsersSelector } from "../../redux/users-selectors";
 import { Table, Th, Td, Tr } from "./UsersTable.styled";
+
 export const UsersTable = () => {
-  const users = useSelector((state) => state.users);
+  const users = useSelector(getUsersSelector);
   return (
     <>
       {users.length > 0 && (

@@ -1,11 +1,12 @@
 import { Input, Label, Text } from "../Form/Form.styled";
 import { useSelector, useDispatch } from "react-redux";
 import { getAutocompleteAddress } from "../../redux/asyncActions/getAutocompleteAddress";
+import { getAutocompleteSelector } from "../../redux/users-selectors";
 var _ = require("lodash");
 
 export const Address = ({ label, register, required, errors }) => {
+  const searchAddress = useSelector(getAutocompleteSelector);
   const dispatch = useDispatch();
-  const searchAddress = useSelector((state) => state.autocompleteAddress);
 
   const handleChange = _.debounce((e) => {
     if (e.target.value.length > 2) {
