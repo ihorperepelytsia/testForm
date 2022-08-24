@@ -5,7 +5,6 @@ export const FirstName = ({ label, register, required, errors }) => {
       <Label>{label}</Label>
       <Input
         border={errors.firstName?.message ? true : false}
-        name="dsf"
         type="text"
         placeholder={label}
         {...register("firstName", {
