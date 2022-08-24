@@ -4,14 +4,15 @@ export const FirstName = ({ label, register, required, errors }) => {
     <>
       <Label>{label}</Label>
       <Input
-       border={errors.firstName?.message ? true : false}
+        border={errors.firstName?.message ? true : false}
         type="text"
+        name="input"
         placeholder={label}
         {...register("firstName", {
           required,
           pattern: {
             value: /[A-Za-z]/,
-            message: "Start with a latter", 
+            message: "Start with a latter",
           },
         })}
       />
